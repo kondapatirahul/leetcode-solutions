@@ -7,7 +7,7 @@ class Solution {
         {
             if(prices[l]<prices[r]){
            int profit=prices[r]-prices[l];
-            max=Math.max(profit,max);
+            max=profit>max? profit:max;
             }
             else
             {
