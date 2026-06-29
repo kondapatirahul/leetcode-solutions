@@ -3,7 +3,7 @@ name: Sync Leetcode
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 0 * * *' # This triggers the sync automatically every night
+    - cron: '0 0 * * *'
 
 jobs:
   build:
@@ -16,4 +16,5 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           leetcode-csrf-token: ${{ secrets.LEETCODE_CSRF_TOKEN }}
           leetcode-session: ${{ secrets.LEETCODE_SESSION }}
-          destination-folder: 'solutions'
+          # This variable structures the folders automatically by difficulty level
+          destination-folder: 'solutions/${{ status.difficulty }}'
