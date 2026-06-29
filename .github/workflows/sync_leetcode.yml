@@ -16,5 +16,4 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           leetcode-csrf-token: ${{ secrets.LEETCODE_CSRF_TOKEN }}
           leetcode-session: ${{ secrets.LEETCODE_SESSION }}
-          # This variable structures the folders automatically by difficulty level
-          destination-folder: 'solutions/${{ status.difficulty }}'
+          destination-folder: 'solutions'
