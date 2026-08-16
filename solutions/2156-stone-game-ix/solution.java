@@ -1,0 +1,13 @@
+class Solution {
+    public boolean stoneGameIX(int[] stones) {
+        int n=stones.length;
+        int cnt[]=new int[3];
+        for(int i=0;i<n;i++) cnt[stones[i]%3]++;
+        if(cnt[0]%2==0)
+        {
+            return cnt[1]>0 && cnt[2]>0;
+        }
+        return Math.abs(cnt[1]-cnt[2])>2;
+        
+    }
+}
